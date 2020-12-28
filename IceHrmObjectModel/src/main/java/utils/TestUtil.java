@@ -48,7 +48,7 @@ public static String getBrowserVersion() throws IOException {
 	      Scanner myReader = new Scanner(myObj);
 	      while (myReader.hasNextLine()) {
 	         data = myReader.nextLine();
-	        System.out.println(data);
+	       // System.out.println(data);
 	        break;
 	        
 	      }
@@ -81,10 +81,8 @@ public static String getBrowserVersion() throws IOException {
 		Calendar cal = Calendar.getInstance(); 
 		cal.setTime(new Date());              
 		cal.add(Calendar.HOUR_OF_DAY, hour);  
-		System.out.println(cal.getTime());
 	    SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-mm-dd HH-mm-ss");
 		String time = dateFormat.format(cal.getTime());
-		System.out.println(time);
 		return time;
 	}
 	
@@ -92,18 +90,11 @@ public static String getBrowserVersion() throws IOException {
 	//---------------------------------Function For Current Date---------------------------------		
 	public static String getCurrentDate(int date)
 	{
-		/*Calendar c = Calendar.getInstance();
-		c.add(Calendar.DATE, date);
-	    SimpleDateFormat dateformat = new SimpleDateFormat("YYYY-mm-dd");  
-	    String strDate = dateformat.format( c.getTime()); 
-	    return strDate;*/
-	    
+		
 	    Calendar c = Calendar.getInstance();
 		c.add(Calendar.DATE, date);
-		//System.out.println(c.getTime());
 	    SimpleDateFormat dateformat = new SimpleDateFormat("YYYY-MM-dd hh:mm:ss");  
 	    String strDate = dateformat.format( c.getTime()); 
-	   // System.out.println(strDate);
 	    return strDate;
 	}
 	
