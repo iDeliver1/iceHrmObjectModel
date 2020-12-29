@@ -17,9 +17,7 @@ public class TestBase {
     public void launchApplication() throws Throwable {
 		TestUtil.propertyFileConfiguration();
 		setChromeDriverProperty();
-		driver.get(prop.getProperty("APP_URL"));
-		//basePage = new PageBase();
-		//basePage.setWebDriver(driver);
+		driver.get(prop.getProperty("AppUrl"));
 	}
 
 	

@@ -27,7 +27,7 @@ public class TC001_iceHrmAttendenceTest extends TestBase{
 		
 		//Punch Out
 		pgAtten = (AttendancePage) pghome.clickOnTab("Attendance");
-		checkblnmethod = pgAtten.icehrmAttendancePage("OUT",0);
+		checkblnmethod = pgAtten.icehrmAttendancePage("OUT",1);
 		Assert.assertEquals(true, checkblnmethod);
 	}
 

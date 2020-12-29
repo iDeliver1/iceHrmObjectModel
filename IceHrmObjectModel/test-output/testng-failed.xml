@@ -6,15 +6,4 @@
       <class name="testcase.TC001_iceHrmAttendenceTest"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="testcase.TC001_iceHrmAttendenceTest">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="icehrmAttendenceTest"/>
-          <include name="launchApplication"/>
-        </methods>
-      </class> <!-- testcase.TC001_iceHrmAttendenceTest -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

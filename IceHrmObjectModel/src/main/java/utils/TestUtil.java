@@ -20,7 +20,7 @@ public class TestUtil extends TestBase{
 	static String rootdir;
 	public static String brow;
 
-public static String getBrowserVersion() throws IOException {
+	public static String getBrowserVersion() throws IOException {
 		
 		try {
 			Runtime rt = Runtime.getRuntime();
@@ -48,17 +48,14 @@ public static String getBrowserVersion() throws IOException {
 	      Scanner myReader = new Scanner(myObj);
 	      while (myReader.hasNextLine()) {
 	         data = myReader.nextLine();
-	       // System.out.println(data);
-	        break;
-	        
+	         break;
 	      }
 	      myReader.close();
 	      return data;
 	    } catch (FileNotFoundException e) {
-	      System.out.println("An error occurred.");
-	      e.printStackTrace();
+	    	System.out.println("An error occurred.");
+	    	e.printStackTrace();
 	    }
-	  
 		return null;
 	}
 	
@@ -81,7 +78,7 @@ public static String getBrowserVersion() throws IOException {
 		Calendar cal = Calendar.getInstance(); 
 		cal.setTime(new Date());              
 		cal.add(Calendar.HOUR_OF_DAY, hour);  
-	    SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-mm-dd HH-mm-ss");
+	    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String time = dateFormat.format(cal.getTime());
 		return time;
 	}
@@ -90,10 +87,9 @@ public static String getBrowserVersion() throws IOException {
 	//---------------------------------Function For Current Date---------------------------------		
 	public static String getCurrentDate(int date)
 	{
-		
 	    Calendar c = Calendar.getInstance();
 		c.add(Calendar.DATE, date);
-	    SimpleDateFormat dateformat = new SimpleDateFormat("YYYY-MM-dd hh:mm:ss");  
+	    SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");  
 	    String strDate = dateformat.format( c.getTime()); 
 	    return strDate;
 	}
