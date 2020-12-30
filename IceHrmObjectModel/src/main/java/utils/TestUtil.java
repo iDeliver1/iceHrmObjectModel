@@ -19,6 +19,7 @@ import base.TestBase;
 public class TestUtil extends TestBase{
 	static String rootdir;
 	public static String brow;
+	public static String Report_Folder_path = "C:\\Reporting";
 
 	public static String getBrowserVersion() throws IOException {
 		
@@ -58,6 +59,24 @@ public class TestUtil extends TestBase{
 	    }
 		return null;
 	}
+	
+	public static String GetCurrentDate()
+	{
+		Date date = new Date();  
+	    SimpleDateFormat dateformat = new SimpleDateFormat("MM/dd/yyyy");  
+	    String strDate = dateformat.format(date); 
+	    return strDate;
+	}
+	
+	public static String Timestamp()
+	{
+		Date now = new Date();
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy-hh-mm-ss");
+		String time = dateFormat.format(now);
+		return time.replace("-", "");
+	}
+	
+	
 	
 	//------------------Function for Reading Property file---------------
 	public static void propertyFileConfiguration() throws Throwable {

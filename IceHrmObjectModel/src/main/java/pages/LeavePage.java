@@ -46,6 +46,11 @@ public class LeavePage extends PageBase {
 	
 	@FindBy(xpath = "//button[contains(text(),'Ok')]")
 	WebElement okBtn;
+	
+	
+	@FindBy(xpath = "//td[@class='dataTables_empty']")
+	WebElement checkEntry;
+	
 
 	public LeavePage(WebDriver driver) {
 		setWebDriver(driver);
@@ -76,6 +81,18 @@ public class LeavePage extends PageBase {
 		waitForElementToAppear(msgBody);
 		msgBody.click();
 		okBtn.click();
+	}
+	
+	public boolean checkEntryTable() {
+		
+		try {
+			 checkEntry.isDisplayed();
+			 return true;
+		}catch(Exception e) {
+		return false;	
+		}
+		
+		
 	}
 
 }
