@@ -14,25 +14,20 @@ public class LeavePage extends PageBase {
 	@FindBy(xpath = "//select[@id='leave_type']")
 	 WebElement selectLeave;
 	
-	
 	@FindBy(xpath = "//input[@id='date_start']")
 	WebElement startDate;
-	
 	
 	@FindBy(xpath = "//input[@id='date_end']")
 	WebElement endDate;
 	
-	
 	@FindBy(xpath = "//textarea[@id='details']")
 	WebElement leaveDetails;
 
-	
 	@FindBy(xpath = "//button[contains(text(),'Continue')]")
 	WebElement continueBtn;
 	
 	@FindBy(xpath = "//tbody[@id='leave_days_table_body']//child::td")
 	WebElement checkLeaveDate;
-	
 	
 	@FindBy(xpath = "//select[@class='days']")
 	WebElement leaveFormat;
@@ -40,12 +35,15 @@ public class LeavePage extends PageBase {
 	@FindBy(xpath = "//div[contains(@class,'controls')]//button[contains(@class,'btn')][contains(text(),'Apply')]")
 	WebElement applyBtn;
 	
-
 	@FindBy(xpath = "//p[@id='messageModelBody']")
 	WebElement msgBody;
 	
 	@FindBy(xpath = "//button[contains(text(),'Ok')]")
 	WebElement okBtn;
+	
+	@FindBy(xpath = "//td[@class='dataTables_empty']")
+	WebElement checkEntry;
+	
 
 	public LeavePage(WebDriver driver) {
 		setWebDriver(driver);
@@ -60,22 +58,32 @@ public class LeavePage extends PageBase {
 		try {
 			waitForElementToAppear(selectLeave);
 			selectLeave.click();
-			TestUtil.SelectItem(selectLeave, 2);
+			TestUtil.selectItem(selectLeave, 2);
 		}catch(Exception e  ) {
 			pbDriver.get(pbDriver.getCurrentUrl());
 			waitDriver();
 			applyLeaveBtn.click();
-			TestUtil.SelectItem(selectLeave, 2);
+			TestUtil.selectItem(selectLeave, 2);
 		}
 		
-		startDate.sendKeys(TestUtil.getCurrentDate(0));
-		endDate.sendKeys(TestUtil.getCurrentDate(0));
+		startDate.sendKeys(TestUtil.getLeaveDate(0));
+		endDate.sendKeys(TestUtil.getLeaveDate(0));
 		continueBtn.click();
-		TestUtil.SelectItem(leaveFormat, 1);
+		TestUtil.selectItem(leaveFormat, 1);
 		applyBtn.click();
 		waitForElementToAppear(msgBody);
 		msgBody.click();
 		okBtn.click();
+	}
+	
+	public boolean checkEntryTable() {
+		
+		try {
+			 checkEntry.isDisplayed();
+			 return true;
+		}catch(Exception e) {
+			return false;	
+		}	
 	}
 
 }

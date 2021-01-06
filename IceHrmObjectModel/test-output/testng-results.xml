@@ -2,20 +2,27 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="35613" started-at="2020-12-29T14:18:33Z" finished-at="2020-12-29T14:19:09Z">
+  <suite name="Default suite" duration-ms="49931" started-at="2021-01-05T09:50:34Z" finished-at="2021-01-05T09:51:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="35613" started-at="2020-12-29T14:18:33Z" finished-at="2020-12-29T14:19:09Z">
+    <test name="Default test" duration-ms="49931" started-at="2021-01-05T09:50:34Z" finished-at="2021-01-05T09:51:24Z">
       <class name="testcase.TC001_iceHrmAttendenceTest">
-        <test-method status="PASS" signature="launchApplication()[pri:0, instance:testcase.TC001_iceHrmAttendenceTest@59f99ea]" name="launchApplication" is-config="true" duration-ms="46551" started-at="2020-12-29T19:47:47Z" finished-at="2020-12-29T19:48:33Z">
+        <test-method status="PASS" signature="launchApplication(org.testng.ITestContext)[pri:0, instance:testcase.TC001_iceHrmAttendenceTest@59f99ea]" name="launchApplication" is-config="true" duration-ms="21063" started-at="2021-01-05T15:20:13Z" finished-at="2021-01-05T15:20:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c448433]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method status="PASS" signature="icehrmAttendenceTest()[pri:0, instance:testcase.TC001_iceHrmAttendenceTest@59f99ea]" name="icehrmAttendenceTest" duration-ms="35590" started-at="2020-12-29T19:48:33Z" finished-at="2020-12-29T19:49:09Z">
+        <test-method status="PASS" signature="icehrmAttendenceTest()[pri:0, instance:testcase.TC001_iceHrmAttendenceTest@59f99ea]" name="icehrmAttendenceTest" duration-ms="49883" started-at="2021-01-05T15:20:34Z" finished-at="2021-01-05T15:21:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- icehrmAttendenceTest -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testcase.TC001_iceHrmAttendenceTest@59f99ea]" name="closeBrowser" is-config="true" duration-ms="925" started-at="2020-12-29T19:49:09Z" finished-at="2020-12-29T19:49:10Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testcase.TC001_iceHrmAttendenceTest@59f99ea]" name="closeBrowser" is-config="true" duration-ms="896" started-at="2021-01-05T15:21:24Z" finished-at="2021-01-05T15:21:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

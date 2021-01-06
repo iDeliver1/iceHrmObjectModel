@@ -1,13 +1,11 @@
 package utils;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Properties;
 import java.util.Scanner;
 
 import org.openqa.selenium.WebElement;
@@ -19,6 +17,7 @@ import base.TestBase;
 public class TestUtil extends TestBase{
 	static String rootdir;
 	public static String brow;
+	public static String reportFolderPath = prop.getProperty("reportFolder");
 
 	public static String getBrowserVersion() throws IOException {
 		
@@ -27,7 +26,7 @@ public class TestUtil extends TestBase{
 			try {
 				rootdir = System.getProperty("user.dir");
 				rt.exec("cmd  /K \"dir /B/AD \"C:/Program Files (x86)/Google/Chrome/Application/\"|findstr /R /C:\"^[0-9].*\\..*[0-9]$\" > "+ rootdir +"\\version.txt\"");
-				brow = getversion();
+				brow = getVersion();
 			} 
 			catch (IOException e) {
 				e.printStackTrace();
@@ -41,7 +40,7 @@ public class TestUtil extends TestBase{
 	}
 
 //--------------------Return Stored value of Chrome Browser Version----------------------------
-	public static String getversion() {
+	public static String getVersion() {
 		 String data = "";
 		try {
 		  File myObj = new File(rootdir+"/version.txt");
@@ -59,21 +58,25 @@ public class TestUtil extends TestBase{
 		return null;
 	}
 	
-	//------------------Function for Reading Property file---------------
-	public static void propertyFileConfiguration() throws Throwable {
-		try {
-			prop = new Properties();
-			String path = System.getProperty("user.dir");
-			FileInputStream ip = new FileInputStream(path+"\\src\\main\\java\\config\\config.properties");
-			prop.load(ip);
-		} 
-		catch (FileNotFoundException e) {
-				e.printStackTrace();
-		}
+	public static String getCurrentDate()
+	{
+		Date date = new Date();  
+	    SimpleDateFormat dateformat = new SimpleDateFormat("MM/dd/yyyy");  
+	    String strDate = dateformat.format(date); 
+	    return strDate;
 	}
 	
+	public static String getTimeStamp()
+	{
+		Date now = new Date();
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy-hh-mm-ss");
+		String time = dateFormat.format(now);
+		return time.replace("-", "");
+	}
+	
+	
 	//-------------------------------------------TimeStamp Function----------------------------------	
-	public static String getTimeStamp(int hour)
+	public static String getAttendenceTime(int hour)
 	{
 		Calendar cal = Calendar.getInstance(); 
 		cal.setTime(new Date());              
@@ -85,17 +88,17 @@ public class TestUtil extends TestBase{
 	
 	
 	//---------------------------------Function For Current Date---------------------------------		
-	public static String getCurrentDate(int date)
+	public static String getLeaveDate(int date)
 	{
-	    Calendar c = Calendar.getInstance();
-		c.add(Calendar.DATE, date);
+	    Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.DATE, date);
 	    SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");  
-	    String strDate = dateformat.format( c.getTime()); 
+	    String strDate = dateformat.format( cal.getTime()); 
 	    return strDate;
 	}
 	
 	//---------------------------------------Select Item--------------------------------------------
-	public static void SelectItem(WebElement element,int LeaveFormat) {
+	public static void selectItem(WebElement element,int LeaveFormat) {
 		Select Leave = new Select(element);
 		Leave.selectByIndex(LeaveFormat);
 	}

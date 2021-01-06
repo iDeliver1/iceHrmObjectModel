@@ -12,14 +12,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class PageBase {
 	protected static WebDriver pbDriver;
 	private WebDriverWait wait;
-	private static final int timeOut = 20; //seconds
-	private  static final int polling = 100; //milliseconds
+	private static final int iTimeOut = 20; //seconds
+	private  static final int iPolling = 100; //milliseconds
 	
 	    
 	public void setWebDriver(WebDriver driver) {
 		PageBase.pbDriver = driver;
-		 wait = new WebDriverWait(pbDriver, timeOut, polling);
-	    PageFactory.initElements(new AjaxElementLocatorFactory(PageBase.pbDriver, timeOut), this);
+		 wait = new WebDriverWait(pbDriver, iTimeOut, iPolling);
+	    PageFactory.initElements(new AjaxElementLocatorFactory(PageBase.pbDriver, iTimeOut), this);
 	}
 	
 	protected void waitForElementToAppear(WebElement element) {
@@ -27,6 +27,6 @@ public class PageBase {
     }
 	
 	public void waitDriver() {
-		pbDriver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		pbDriver.manage().timeouts().implicitlyWait(iTimeOut,TimeUnit.SECONDS);
 	}
 }

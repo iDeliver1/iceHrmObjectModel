@@ -3,8 +3,11 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 import base.PageBase;
+import basePage.TestBase;
+import pageModules.HomePage;
 
 public class LoginPage extends PageBase{
 	
@@ -16,6 +19,9 @@ public class LoginPage extends PageBase{
 	
 	@FindBy(xpath = "//input[@id='password']")
 	WebElement enterPassWord;
+	
+	@FindBy(xpath = "//a[contains(text(),'IceHrm Employee')]")
+	WebElement validateUser;
 	
 	
 	public LoginPage(WebDriver driver) {
@@ -36,12 +42,22 @@ public class LoginPage extends PageBase{
 		loginBtn.click();
 	}
 
+	public boolean validate() {
+		return validateUser.isDisplayed();
+	}
 	
 	public HomePage userLogin(String strUserName, String strPasswprd) {
 		setUserName(strUserName);
 		setPassword(strPasswprd);
 		clickOnLogInButton();
-		return new HomePage(pbDriver);
+		
+		try {
+			Assert.assertEquals(true,validate());
+			return new HomePage(pbDriver);
+		}catch(Exception e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 	
 }

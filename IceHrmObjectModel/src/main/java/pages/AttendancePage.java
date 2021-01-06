@@ -28,9 +28,9 @@ public class AttendancePage extends PageBase {
 	}
 
 	
-	public void PunchSystem(String Status,int time) {
+	public void punchSystem(String Status,int time) {
 		Time.clear();
-		Time.sendKeys(TestUtil.getTimeStamp(time));
+		Time.sendKeys(TestUtil.getAttendenceTime(time));
 		note.clear();
 		note.sendKeys(Status);
 		saveBtn.click();
@@ -50,11 +50,11 @@ public class AttendancePage extends PageBase {
 		try {
 		switch(AttendanceWay) {
 			case "IN"	:punchIn();
-						 PunchSystem(AttendanceWay,time);
+						 punchSystem(AttendanceWay,time);
 						 return true;
 						
 			case "OUT"	:punchOut();
-						 PunchSystem(AttendanceWay, time);
+						 punchSystem(AttendanceWay, time);
 						 return true;
 						 
 			default		:System.out.println("invalid section");

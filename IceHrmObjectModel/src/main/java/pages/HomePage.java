@@ -7,14 +7,14 @@ import base.PageBase;
 
 public class HomePage extends PageBase {
 	@FindBy(xpath = "//a[@id='atteandanceLink']")
-	WebElement attendanceTab;
+	 public WebElement attendanceTab;
 	
 	@FindBy(xpath = "//a[@class='logo']")
 	public WebElement homeBtn;
 	
 	
 	@FindBy(xpath = "//a[@id='leavesLink']")
-	WebElement leaveTab;
+	public WebElement leaveTab;
 	
 	public HomePage(WebDriver driver) {
 		setWebDriver(driver);
