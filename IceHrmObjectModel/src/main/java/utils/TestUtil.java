@@ -102,5 +102,15 @@ public class TestUtil extends TestBase{
 		Select Leave = new Select(element);
 		Leave.selectByIndex(LeaveFormat);
 	}
+	
+	//------------------------get date by format---------------------------------------------------
+	public static String getDatebyFormat(String dateFormat ,int addToDate)
+	{
+	    Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.DATE, addToDate);
+	    SimpleDateFormat dateformat = new SimpleDateFormat(dateFormat);  
+	    String strDate = dateformat.format( cal.getTime()); 
+	    return strDate;
+	}
 }
 	

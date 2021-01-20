@@ -7,20 +7,21 @@ import base.PageBase;
 
 public class HomePage extends PageBase {
 	@FindBy(xpath = "//a[@id='atteandanceLink']")
-	 public WebElement attendanceTab;
+	public WebElement attendanceTab;
 	
 	@FindBy(xpath = "//a[@class='logo']")
 	public WebElement homeBtn;
 	
-	
 	@FindBy(xpath = "//a[@id='leavesLink']")
 	public WebElement leaveTab;
+	
+	@FindBy(xpath = "//a[@id='mytravelLink']")
+	public WebElement travelTab;
 	
 	public HomePage(WebDriver driver) {
 		setWebDriver(driver);
 	}
 
-	
 	public Object clickOnTab(String TabName) {
 		homeBtn.click();
 		if(TabName.equalsIgnoreCase("Attendance")) {
@@ -30,6 +31,11 @@ public class HomePage extends PageBase {
 		else if(TabName.equalsIgnoreCase("Leave")) {
 			leaveTab.click();
 			 return new LeavePage(pbDriver);
+		}
+		
+		else if(TabName.equalsIgnoreCase("Travel")) {
+			travelTab.click();
+			return new TravelPage(pbDriver);
 		}
 		else
 			return false;

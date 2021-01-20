@@ -2,31 +2,31 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="49931" started-at="2021-01-05T09:50:34Z" finished-at="2021-01-05T09:51:24Z">
+  <suite name="Default suite" duration-ms="17864" started-at="2021-01-07T15:36:12Z" finished-at="2021-01-07T15:36:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="49931" started-at="2021-01-05T09:50:34Z" finished-at="2021-01-05T09:51:24Z">
-      <class name="testcase.TC001_iceHrmAttendenceTest">
-        <test-method status="PASS" signature="launchApplication(org.testng.ITestContext)[pri:0, instance:testcase.TC001_iceHrmAttendenceTest@59f99ea]" name="launchApplication" is-config="true" duration-ms="21063" started-at="2021-01-05T15:20:13Z" finished-at="2021-01-05T15:20:34Z">
+    <test name="Default test" duration-ms="17864" started-at="2021-01-07T15:36:12Z" finished-at="2021-01-07T15:36:30Z">
+      <class name="testcase.TC002_iceHrmTravelRequestTest">
+        <test-method status="PASS" signature="launchApplication(org.testng.ITestContext)[pri:0, instance:testcase.TC002_iceHrmTravelRequestTest@523884b2]" name="launchApplication" is-config="true" duration-ms="14899" started-at="2021-01-07T21:05:58Z" finished-at="2021-01-07T21:06:12Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5c448433]]>
+                <![CDATA[org.testng.TestRunner@340b7ef6]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method status="PASS" signature="icehrmAttendenceTest()[pri:0, instance:testcase.TC001_iceHrmAttendenceTest@59f99ea]" name="icehrmAttendenceTest" duration-ms="49883" started-at="2021-01-05T15:20:34Z" finished-at="2021-01-05T15:21:24Z">
+        <test-method status="PASS" signature="iceHrmTravelRequest()[pri:0, instance:testcase.TC002_iceHrmTravelRequestTest@523884b2]" name="iceHrmTravelRequest" duration-ms="17859" started-at="2021-01-07T21:06:12Z" finished-at="2021-01-07T21:06:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- icehrmAttendenceTest -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testcase.TC001_iceHrmAttendenceTest@59f99ea]" name="closeBrowser" is-config="true" duration-ms="896" started-at="2021-01-05T15:21:24Z" finished-at="2021-01-05T15:21:25Z">
+        </test-method> <!-- iceHrmTravelRequest -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testcase.TC002_iceHrmTravelRequestTest@523884b2]" name="closeBrowser" is-config="true" duration-ms="921" started-at="2021-01-07T21:06:30Z" finished-at="2021-01-07T21:06:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- testcase.TC001_iceHrmAttendenceTest -->
+      </class> <!-- testcase.TC002_iceHrmTravelRequestTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
