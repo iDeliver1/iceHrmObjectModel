@@ -2,31 +2,31 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17864" started-at="2021-01-07T15:36:12Z" finished-at="2021-01-07T15:36:30Z">
+  <suite name="Default suite" duration-ms="10872" started-at="2021-01-27T13:01:05Z" finished-at="2021-01-27T13:01:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17864" started-at="2021-01-07T15:36:12Z" finished-at="2021-01-07T15:36:30Z">
-      <class name="testcase.TC002_iceHrmTravelRequestTest">
-        <test-method status="PASS" signature="launchApplication(org.testng.ITestContext)[pri:0, instance:testcase.TC002_iceHrmTravelRequestTest@523884b2]" name="launchApplication" is-config="true" duration-ms="14899" started-at="2021-01-07T21:05:58Z" finished-at="2021-01-07T21:06:12Z">
+    <test name="Default test" duration-ms="10872" started-at="2021-01-27T13:01:05Z" finished-at="2021-01-27T13:01:16Z">
+      <class name="testcase.TC004_iceHrmTravelAproval">
+        <test-method status="PASS" signature="launchApplication(org.testng.ITestContext)[pri:0, instance:testcase.TC004_iceHrmTravelAproval@5b275dab]" name="launchApplication" is-config="true" duration-ms="9140" started-at="2021-01-27T18:30:56Z" finished-at="2021-01-27T18:31:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@340b7ef6]]>
+                <![CDATA[org.testng.TestRunner@1f86099a]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method status="PASS" signature="iceHrmTravelRequest()[pri:0, instance:testcase.TC002_iceHrmTravelRequestTest@523884b2]" name="iceHrmTravelRequest" duration-ms="17859" started-at="2021-01-07T21:06:12Z" finished-at="2021-01-07T21:06:30Z">
+        <test-method status="PASS" signature="iceHrmTravelAproval()[pri:0, instance:testcase.TC004_iceHrmTravelAproval@5b275dab]" name="iceHrmTravelAproval" duration-ms="10860" started-at="2021-01-27T18:31:05Z" finished-at="2021-01-27T18:31:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- iceHrmTravelRequest -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testcase.TC002_iceHrmTravelRequestTest@523884b2]" name="closeBrowser" is-config="true" duration-ms="921" started-at="2021-01-07T21:06:30Z" finished-at="2021-01-07T21:06:31Z">
+        </test-method> <!-- iceHrmTravelAproval -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testcase.TC004_iceHrmTravelAproval@5b275dab]" name="closeBrowser" is-config="true" duration-ms="961" started-at="2021-01-27T18:31:16Z" finished-at="2021-01-27T18:31:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- testcase.TC002_iceHrmTravelRequestTest -->
+      </class> <!-- testcase.TC004_iceHrmTravelAproval -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -27,9 +27,15 @@ public class TC002_iceHrmTravelRequestTest extends TestBase{
 		}
 		
 		//Travel Request
-		pgHome.clickOnTab("Travel");
-		pgTravel = new TravelPage(driver);
-		pgTravel.addTravelRequest();
+		pgTravel = (TravelPage) pgHome.clickOnTab("Travel");
+		checkBlnMethod = pgTravel.addTravelRequest();
+		
+		try {
+			Assert.assertEquals(true, checkBlnMethod);
+			reporting("Travel Request Validation", "User Should Generate Travel Request", "Travel Request Successfully Generated", "Pass");
+		}catch(AssertionError E) {
+			reporting("Travel Request Validation", "User Should Generate Travel Request", "Travel Request Failed", "Fail");
+		}
 		
 	}
 

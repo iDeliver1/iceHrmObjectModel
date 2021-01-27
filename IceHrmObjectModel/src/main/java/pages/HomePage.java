@@ -18,6 +18,12 @@ public class HomePage extends PageBase {
 	@FindBy(xpath = "//a[@id='mytravelLink']")
 	public WebElement travelTab;
 	
+	@FindBy(xpath = "//a[@id='leaveLink']")
+	public WebElement adminLeaveTab;
+	
+	@FindBy(xpath = "//a[@id='travelLink']")
+	WebElement adminTravelTab;
+	
 	public HomePage(WebDriver driver) {
 		setWebDriver(driver);
 	}
@@ -37,6 +43,17 @@ public class HomePage extends PageBase {
 			travelTab.click();
 			return new TravelPage(pbDriver);
 		}
+		
+		else if(TabName.equalsIgnoreCase("Leave Approval")) {
+			adminLeaveTab.click();
+			return new AdminLeavePage(pbDriver);
+		}
+		
+		else if(TabName.equalsIgnoreCase("Travel Approval")) {
+			adminTravelTab.click();
+			return new AdminTravelPage(pbDriver);
+		}
+		
 		else
 			return false;
 	}

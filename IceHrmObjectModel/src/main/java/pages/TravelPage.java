@@ -1,5 +1,6 @@
 package pages;
 
+import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -37,11 +38,15 @@ public class TravelPage extends PageBase{
 	@FindBy(xpath = "//button[contains(text(),'Save')]")
 	public WebElement saveBtn;
 	
+	@FindBy(xpath ="//table[@id='grid']/tbody/tr/td")
+	public List<WebElement> tableRow;
+	
+	
 	public TravelPage(WebDriver driver) {
 		setWebDriver(driver);
 	}
 	
-	public void addTravelRequest() throws Throwable {
+	public boolean addTravelRequest() throws Throwable {
 		addNewBtn.click();
 		TestUtil.selectItem(meansOfTransport, 0);
 		purposeOfTravel.sendKeys("Company Meeting");
@@ -53,6 +58,16 @@ public class TravelPage extends PageBase{
 		Thread.sleep(5000);
 		funding.sendKeys("2500");
 		saveBtn.click();
+		
+		// Travel table row validation
+		if(validateTable()>1)
+			return true;
+		else
+			return false;
+	}
+	
+	public int validateTable() {
+		return tableRow.size();
 	}
 
 }
