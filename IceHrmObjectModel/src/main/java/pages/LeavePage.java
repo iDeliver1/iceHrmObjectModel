@@ -41,6 +41,10 @@ public class LeavePage extends PageBase {
 	@FindBy(xpath = "//button[contains(text(),'Ok')]")
 	WebElement okBtn;
 	
+<<<<<<< HEAD
+=======
+	
+>>>>>>> branch 'master' of https://github.com/iDeliver1/iceHrmObjectModel.git
 	@FindBy(xpath = "//td[@class='dataTables_empty']")
 	WebElement checkEntry;
 	
@@ -82,8 +86,15 @@ public class LeavePage extends PageBase {
 			 checkEntry.isDisplayed();
 			 return true;
 		}catch(Exception e) {
+<<<<<<< HEAD
 			return false;	
 		}	
+=======
+		return false;	
+		}
+		
+		
+>>>>>>> branch 'master' of https://github.com/iDeliver1/iceHrmObjectModel.git
 	}
 
 }

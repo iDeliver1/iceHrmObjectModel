@@ -7,13 +7,18 @@ import base.PageBase;
 
 public class HomePage extends PageBase {
 	@FindBy(xpath = "//a[@id='atteandanceLink']")
+<<<<<<< HEAD
 	public WebElement attendanceTab;
+=======
+	 public WebElement attendanceTab;
+>>>>>>> branch 'master' of https://github.com/iDeliver1/iceHrmObjectModel.git
 	
 	@FindBy(xpath = "//a[@class='logo']")
 	public WebElement homeBtn;
 	
 	@FindBy(xpath = "//a[@id='leavesLink']")
 	public WebElement leaveTab;
+<<<<<<< HEAD
 	
 	@FindBy(xpath = "//a[@id='mytravelLink']")
 	public WebElement travelTab;
@@ -23,6 +28,8 @@ public class HomePage extends PageBase {
 	
 	@FindBy(xpath = "//a[@id='travelLink']")
 	WebElement adminTravelTab;
+=======
+>>>>>>> branch 'master' of https://github.com/iDeliver1/iceHrmObjectModel.git
 	
 	public HomePage(WebDriver driver) {
 		setWebDriver(driver);
